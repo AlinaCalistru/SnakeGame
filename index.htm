@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <h1>Snake game</h1>
+    <section class="container">
+      <!-- left column -->
+      <div class="item">
+        <h1>Register</h1>
+        <div id="existing-user">
+          <p>Welcome <span>Alina</span></p>
+          <button id="start">Start/Restart</button>
+          <button id="change-player-btn">Change player</button>
+        </div>
+
+        
+        <div id="new-user">
+          <p>Please register your name</p>
+          <form> 
+            <input type="text" placeholder="Enter your name" id="player" />
+            <button type="submit" id="register-btn">Register</button>
+          </form>
+        </div>
+     
+      </div>
+
+      <!-- center column -->
+      <div class="item snake-item">
+        <h2>Score <span id="score">0</span></h2>
+        <div class="grid"></div>
+      </div>
+
+      <!-- right column -->
+      <div class="item">
+        <h1>Leaderboard</h1>
+        <ul id="leaderboard">
+          
+        </ul>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
