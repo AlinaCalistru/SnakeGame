@@ -5,44 +5,48 @@
       href="https://fonts.googleapis.com/css2?family=Baloo&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="index.css" rel="stylesheet" />
   </head>
 
   <body>
-    <h1>Snake game</h1>
+    <h1>A <span>different</span> Snake game</h1>
     <section class="container">
       <!-- left column -->
       <div class="item">
-        <h1>Register</h1>
+        <h1>Player Settings</h1>
         <div id="existing-user">
           <p>Welcome <span>Alina</span></p>
-          <button id="start">Start/Restart</button>
-          <button id="change-player-btn">Change player</button>
+          <button class="start-btn">Start/Restart</button>
+          <button class="change-player-btn">Change player</button>
         </div>
 
-        
         <div id="new-user">
           <p>Please register your name</p>
-          <form> 
+          <form>
             <input type="text" placeholder="Enter your name" id="player" />
             <button type="submit" id="register-btn">Register</button>
           </form>
         </div>
-     
       </div>
 
       <!-- center column -->
-      <div class="item snake-item">
+      <div class="item item-snake">
         <h2>Score <span id="score">0</span></h2>
-        <div class="grid"></div>
+        <div class="grid">
+        
+        </div>
+        <div id="game-over">
+          <h1>Game Over!</h1>
+          <button class="start-btn">Start/Restart</button>
+          
+        </div>
       </div>
-
+  
       <!-- right column -->
       <div class="item">
         <h1>Leaderboard</h1>
-        <ul id="leaderboard">
-          
-        </ul>
+        <ul id="leaderboard"></ul>
       </div>
     </section>
     <script src="index.js"></script>

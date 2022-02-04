@@ -1,49 +1,69 @@
 html,
 body {
-  margin: 10;
-  padding: 10;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-image: url("./snake_bg_portrait.jfif");
+  background-color: #592394;
   background-repeat: no-repeat;
   background-size: cover;
-  color:#fff;
+  color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h1{
-  text-align:center;
+/* Typography */
+h1 {
+  text-align: center;
 }
 
+h1 span{
+  font-style: italic;
+  color:#69e34f;
+}
+/* Layout */
 .container {
-  /* max-width: 900px; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  flex-direction:column;
 }
 
 .item {
-  /* width: 33%; */
   text-align: center;
-  min-width: 305px;
-
+  width: 215px;
+  margin: 0 auto;
 }
 
-
-.iten-snake {
-  width: 405px;
+.item-snake {
+  width: 408px;
   text-align: center;
+  margin: 0 auto;
+  position:relative;
 }
 
+/* Player settings */
+#new-user,
+#existing-user {
+  background-color: rgba(122, 113, 129, 0.5);
+  border-radius: 10px;
+  border: 4px solid rgba(122, 113, 129, 0.5);
+  padding-bottom: 20px;
+}
 
+#player{
+  max-width:120px;
+}
+
+/* Snake game grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
   width: 400px;
   height: 400px;
-  border: 4px solid #592394; 
+  border: 4px solid #592394;
   border-radius: 10px;
   background-color: rgba(196, 139, 244, 0.8);
   margin: 0 auto;
@@ -55,7 +75,7 @@ h1{
 }
 
 .snake {
-  background-color: #69E34F;
+  background-color: #69e34f;
   border-radius: 5px;
 }
 
@@ -66,41 +86,46 @@ h1{
   content: "🐲";
 }
 
-/* :root{
-    --url:url()
-} */
-
-.apple::before {
-  content: "🍎";
-  /* content:'a'; */
+.flame::before {
+  content: "🔥";
   background-color: transparent;
 }
 
-#new-user,
-#existing-user{
-  background-color:rgba(122, 113, 129, 0.5);
+#game-over{
+  position:absolute;
+  top: 30%;
+  left: 50%;
+  background-color: black;
+  padding:30px; 
   border-radius: 10px;
-  height: 400px;
-  border: 4px solid rgba(122, 113, 129, 0.5); 
+  display:none;
+  margin-left: -96px;
+
 }
 
-#leaderboard{
-  background-color:rgba(122, 113, 129, 0.5);
+/* Leaderboard */
+#leaderboard {
+  background-color: rgba(122, 113, 129, 0.5);
   border-radius: 10px;
   list-style-type: none;
-  text-align:left ;
-  height: 400px;
-  border: 4px solid rgba(122, 113, 129, 0.5); 
+  text-align: left;
+  border: 4px solid rgba(122, 113, 129, 0.5);
   padding: 0;
 }
 
-
-
-#leaderboard li{
-  display:flex;
+#leaderboard li {
+  display: flex;
   justify-content: space-between;
   margin: 0 20px;
 }
-#leaderboard li span{
-  
+
+/* Media queries / Responsivity */
+@media(min-width:880px){
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
 }
