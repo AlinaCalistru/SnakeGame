@@ -132,7 +132,7 @@ function control(e) {
  *  register form
  */
 function checkPlayer() {
-  let currentPlayer = localStorage.getItem("player");
+  currentPlayer = localStorage.getItem("player");
 
   if (currentPlayer === null) {
     existingUserContainer.style.display = "none";
@@ -171,6 +171,9 @@ function changePlayer() {
  */
 function displayLeaderBoard() {
   let leaderBoard = getObject("leaderBoard");
+  if (leaderBoard === null) {
+    leaderBoard = [];
+  }
   if (leaderBoard.length > 1) {
     leaderBoard.sort(function (a, b) {
       let keyA = a.score,
